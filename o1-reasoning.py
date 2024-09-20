@@ -1498,8 +1498,7 @@ class Pipeline:
                 messages=messages,
                 model=self.valves.MODEL_NAME,
                 temperature=temperature,
-                response_format={"type": "json_object"},
-                max_completion_tokens=16384,
+                response_format={"type": "json_object"}
             )
 
             content = response.choices[0].message.content
@@ -1521,7 +1520,6 @@ class Pipeline:
                 messages=messages,
                 model=self.valves.MODEL_NAME,
                 temperature=temperature,
-                max_completion_tokens=16384,
                 tools=tools,
             )
         except Exception as e:
